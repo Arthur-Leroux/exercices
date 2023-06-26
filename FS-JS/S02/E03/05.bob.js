@@ -26,9 +26,7 @@ const sponge = {
   favoriteActivity: ["pêche aux méduses", "sculpture de bulles"],
 };
 
-for (const property in sponge) {
-  console.log(`bob's ${property} is ${sponge[property]} `);
-};
+
 /*
 const object = { a: 1, b: 2, c: 3 };
 
@@ -43,3 +41,6 @@ Grâce à une boucle, afficher dans la console (!) CHAQUE propriété de Bob sou
 Tester en console : pas de test automatisé pour l'instant \(ツ)/
 
 */
+for (const property in sponge) {
+  console.log(`bob's ${property} is ${sponge[property]} `);
+};
