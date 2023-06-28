@@ -33,11 +33,14 @@ for (i = 0; i < defender.length; i++) {
 // 5. Insérer un joueur supplémentaire dans la liste : 'Christophe Dugarry'
 // (bonus: avec la classe 'forward')
 
-   let creationElement = document.createElement("li");
+let creationElement = document.createElement("li");
 
-   let containerElement = document.getElementsByTagName("ul");
-   
-   creationElement.innerHTML = "Christophe Dugarry";
-   console.log(typeof creationElement, creationElement);
-      containerElement = containerElement.classList.add("#forward");
-      console.log(typeof containerElement, containerElement);
+let containerElement = document.getElementsByTagName("ul");
+containerElement = containerElement[0];
+creationElement.innerHTML = "Christophe Dugarry";
+
+containerElement.classList.add("#forward");
+
+containerElement.appendChild(creationElement);
+console.log(typeof creationElement, creationElement);
+console.log(typeof containerElement, containerElement);
