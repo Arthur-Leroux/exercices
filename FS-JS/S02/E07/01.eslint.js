@@ -11,8 +11,8 @@
 
 var truc = document.querySelector("button");
 truc.addEventListener("click", function (event) {
-    var machin = document.querySelector("p");
-    machin.textContent = buildNewButtonText(event);
+    var paragrapheElement = document.querySelector("p");
+    paragrapheElement.textContent = buildNewButtonText(event);
 });
 
 function buildNewButtonText() {
