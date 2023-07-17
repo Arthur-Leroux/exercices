@@ -7,27 +7,24 @@
 
 // Si tu vois du rouge, très bien, c'est l'occasion de lire les messages d'erreurs associés (en survolant ces lignes rouges) et les corriger en conséquence.
 
-
 // ETAPE 1 - corriger les erreurs ESLint
 
-var truc =  document.querySelector("button")
-truc.addEventListener ("click", function(event) { 
-        var machin = document.querySelector("p")
-        machin.textContent  = buildNewButtonText(); //this line changes the text of the button
-})
+var truc = document.querySelector("button");
+truc.addEventListener("click", function (event) {
+    var machin = document.querySelector("p");
+    machin.textContent = buildNewButtonText(event);
+});
 
+function buildNewButtonText() {
 
-function buildNewButtonText (){
-    return  ('🙈 Oh non, je suis démasqué ! 🙈');
     console.log("J'ai un doute sur l'utilité de cette ligne...");
-};
-
+    return "🙈 Oh non, je suis démasqué ! 🙈";
+}
 
 // ETAPE 2 - refactor
 
 // Bon, tout de même... 'truc' et 'machin' c'est pas dingue comme nom de variable ! Comment les renommer ?
 // Vérifie toute de même que le code n'est pas cassé dans ton navigateur :)
-
 
 // ETAPE 3 - nouvelle règle ESLint
 
