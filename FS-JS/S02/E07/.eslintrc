@@ -1,31 +1,40 @@
 {
-    "env": {
-      "node": true,
-      "es6": true,
-      "mocha": true,
-      "browser": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-      "eslint no-var": "error",
-      "indent": ["error", 4],
-      "semi": ["error", "always"],
-      "quotes": "error",
-      "spaced-comment": "error",
-      "no-trailing-spaces": "error",
-      "space-before-function-paren": ["error", {
-          "named": "never",
-          "anonymous": "always"
-          
-          
-        }],
-        
-      "no-multi-spaces": "error",
-      "func-call-spacing": ["error", "never"],
-      "space-before-blocks": "error"
-      // Ajoute tes règles ESLint ici !
-    }
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-var": "error",
+    "indent": [
+      "error",
+      4
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": "error",
+    "spaced-comment": "error",
+    "no-trailing-spaces": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "named": "never",
+        "anonymous": "always"
+      }
+    ],
+    "no-multi-spaces": "error",
+    "func-call-spacing": [
+      "error",
+      "never"
+    ],
+    "space-before-blocks": "error"
+    // Ajoute tes règles ESLint ici !
+  }
 }

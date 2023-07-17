@@ -9,9 +9,9 @@
 
 // ETAPE 1 - corriger les erreurs ESLint
 
-var truc = document.querySelector("button");
+const truc = document.querySelector("button");
 truc.addEventListener("click", function (event) {
-    var paragrapheElement = document.querySelector("p");
+    const paragrapheElement = document.querySelector("p");
     paragrapheElement.textContent = buildNewButtonText(event);
 });
 
