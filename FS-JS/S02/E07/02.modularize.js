@@ -41,7 +41,12 @@ function buildOperations() {
         name: "tronquer",
         sign: null,
         isSingleMemberOperation: true
-    }];
+    }, {
+        id: "pow",
+        name: "puissance",
+        sign: null,
+        isSingleMemberOperation: true
+    },];
 }
 
 

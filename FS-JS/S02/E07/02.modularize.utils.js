@@ -9,9 +9,22 @@ const computer = {
 
     truncate: function (x) {
         return Math.floor(x);
+    },
+    multiply: function (x, y) {
+        return x * y;
+    },
+    divide: function (x,y) {
+
+        return x/y;
+    },
+    round :function (x) {
+        return Math.round(x);
+    },
+    pow: function (x,p) {
+
+        return Math.pow(x,p);
     }
 };
-
 
 // -------- PARTIE 1 ---------
 // Ajoute dans cet objet-module plusieurs fonctions :
@@ -22,16 +35,11 @@ const computer = {
 // - `round(x)` : qui arrondit le nombre passé en paramètre à l'entier le plus proche
 // - `pow(x, p)` : qui passe le nombre passé en premier paramètre à la puissance p
 
-
 // -------- PARTIE 2 ---------
 
 // Tu as peut-être remarqué que la fonction 'pow' n'est pas encore visible dans le DOM 😿
 // Trouve le moyen le plus simple de l'y ajouter.
 // Indice : ça se passe quelque part dans `modularize.js`
-
-
-
-
 
 // /!\ Ne pas supprimer cette ligne (utile pour lancer les tests automatisés)
 module.exports = computer; // DO NOT DELETE ME SENPAI *_*

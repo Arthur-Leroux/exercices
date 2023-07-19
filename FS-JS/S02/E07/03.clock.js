@@ -7,15 +7,28 @@
 // Pour cela, vous aurez besoin d'une fonction bien utile :
 // https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
-
-document.getElementById("clock").innerText = getTime();
-
+// const clockElement = document.getElementById("clock").innerText = getTime();
 function getTime() {
+
+    const clockElement = document.getElementById("clock");
     const now = new Date();
-    const date = now.toLocaleDateString("fr-FR", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-    const time = now.toTimeString().substring(0, 8);
-    return `
+    const date = now.toLocaleDateString("fr-FR", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+    let time = now.toTimeString().substring(0, 8);
+
+    // console.log(time);
+
+    clockElement.innerText = `
         Nous somme le ${date}.\n
         Il est ${time}.
     `;
 }
+
+
+setInterval(getTime,1000);
+
+
