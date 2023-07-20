@@ -1,7 +1,47 @@
 // -------- PART 1: DATA ---------
 
+
 // Créer une liste d'objets pour représenter les données suivantes : 
 // PS : le nom des clés est à votre convenance.
+
+const avengerStudents = [
+    {
+      pseudonyme: 'Captain America',
+      naissance: 1917,
+      job: 'Agent Fédéral',
+      equipements: ['Bouclier', 'Moto', 'Costume'],
+      lienImage: 'captain-america.png'
+    },
+    {
+      pseudonyme: 'Spiderman',
+      naissance: 1962,
+      job: 'PDG de Parker Industries',
+      equipements: ['Toile', 'Précognition'],
+      lienImage: 'spiderman.png'
+    },
+    {
+      pseudonyme: 'Hulk',
+      naissance: 1962,
+      job: 'Physicien nucléaire',
+      equipements: ['Force', 'Petit short moulant'],
+      lienImage: 'hulk.png'
+    },
+    {
+      pseudonyme: 'Iron Man',
+      naissance: 1963,
+      job: 'PDG de Stark Industries',
+      equipements: ['Armure', 'Répulseurs d\'énergie'],
+      lienImage: 'iron-man.png'
+    },
+    {
+      pseudonyme: 'Thor',
+      naissance: 1962,
+      job: 'Médecin',
+      equipements: ['Gros marteau'],
+      lienImage: 'thor.png'
+    }
+  ];
+  
 
 
 /*                 -- Liste des "étudiants" de la promotion AVENGER ---
@@ -23,8 +63,138 @@
 // Un template pour le HTML de chaque "étudiant" nous est aggréablement fourni par un designer/intégrateur de l'équipe marketing ! 
 // On peut le retrouver dans le fichier HTML.
 
+    // -------- PARTIE 1: DATA ---------
+
+// Liste des objets représentant les étudiants de la promotion AVENGER
+const students = [
+  {
+    name: "Captain America",
+    birthYear: 1917,
+    job: "Agent Fédéral",
+    equipment: ["Bouclier", "Moto", "Costume"],
+    image: "./01.revision.assets/captain-america.png",
+  },
+  {
+    name: "Spiderman",
+    birthYear: 1962,
+    job: "PDG de Parker Industries",
+    equipment: ["Toile", "Précognition"],
+    image: "./01.revision.assets/spiderman.png",
+  },
+  {
+    name: "Hulk",
+    birthYear: 1962,
+    job: "Physicien nucléaire",
+    equipment: ["Force", "Petit short moulant"],
+    image: "./01.revision.assets/hulk.png",
+  },
+  {
+    name: "Iron Man",
+    birthYear: 1963,
+    job: "PDG de Stark Industries",
+    equipment: ["Armure", "Répulseurs d'énergie"],
+    image: "./01.revision.assets/iron-man.png",
+  },
+  {
+    name: "Thor",
+    birthYear: 1962,
+    job: "Médecin",
+    equipment: ["Gros marteau"],
+    image: "./01.revision.assets/thor.png",
+  },
+];
+
+// -------- PARTIE 2: DOM ---------
+
+// Fonction pour créer et insérer un étudiant dans le DOM
+function createStudentCard(student) {
+  const avengerDiv = document.createElement("div");
+  avengerDiv.classList.add("avenger");
+
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("card");
+
+  const rectoDiv = document.createElement("div");
+  rectoDiv.classList.add("recto");
+
+  const containerDiv = document.createElement("div");
+  containerDiv.classList.add("container");
+
+  const image = document.createElement("img");
+  image.src = student.image;
+
+  const overlayDiv = document.createElement("div");
+  overlayDiv.classList.add("overlay");
+
+  const h1Name = document.createElement("h1");
+  h1Name.textContent = student.name;
+
+  containerDiv.appendChild(image);
+  containerDiv.appendChild(overlayDiv);
+  containerDiv.appendChild(h1Name);
+  rectoDiv.appendChild(containerDiv);
+
+  const versoDiv = document.createElement("div");
+  versoDiv.classList.add("verso");
+
+  const h2Name = document.createElement("h2");
+  h2Name.textContent = student.name;
+
+  const birthYearDiv = document.createElement("div");
+  birthYearDiv.textContent = `Année de création : ${student.birthYear}`;
+
+  const jobDiv = document.createElement("div");
+  jobDiv.textContent = `Métier : ${student.job}`;
+
+  const equipmentDiv = document.createElement("div");
+  equipmentDiv.textContent = "Équipement :";
+  const equipmentList = document.createElement("ul");
+  student.equipment.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    equipmentList.appendChild(li);
+  });
+  equipmentDiv.appendChild(equipmentList);
+
+  versoDiv.appendChild(h2Name);
+  versoDiv.appendChild(birthYearDiv);
+  versoDiv.appendChild(jobDiv);
+  versoDiv.appendChild(equipmentDiv);
+
+  cardDiv.appendChild(rectoDiv);
+  cardDiv.appendChild(versoDiv);
+
+  avengerDiv.appendChild(cardDiv);
+
+  return avengerDiv;
+}
+
+// Fonction pour insérer tous les étudiants dans le DOM
+function insertStudentsIntoDOM() {
+  const avengersContainer = document.getElementById("avengers");
+
+  students.forEach((student) => {
+    const studentCard = createStudentCard(student);
+    avengersContainer.appendChild(studentCard);
+  });
+}
+
+// Appel de la fonction pour insérer les étudiants dans le DOM
+insertStudentsIntoDOM();
+
+   
+    
+
+
+
+
 // Une fois les éléments insérés : si vous ne voyez pas toutes les informations s'afficher, c'est normal. 
 // On ne voit que le 'recto' des cartes et on verra le 'verso' après avoir réalisé l'étape 3.
+
+
+
+
+
 
 
 // -------- PART 3: LISTENERS ---------
