@@ -199,6 +199,9 @@ insertStudentsIntoDOM();
 
 // -------- PART 3: LISTENERS ---------
 
+avengerStudents.addEventListener(`mouseover`,function(){
+  
+})
 // Lors du survol avec la souris de CHAQUE étudiant :
 //     on ajouter à la div `.avenger` une nouvelle classe `.hovered`
 // Idem, lorsque l'utilisateur RETIRE sa souris de CHAQUE étudiant :
